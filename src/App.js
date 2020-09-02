@@ -12,6 +12,8 @@ import {
 import Order from './component/order/Order';
 import Manage from './component/manage/Manage';
 import NotFound from './component/notfound/NotFound';
+import ProductDetails from './component/productDetails/ProductDetails';
+
 function App() {
   return (
     <div>
@@ -31,7 +33,9 @@ function App() {
  <Route exact path="/">
 <Shop></Shop>
  </Route>
-
+<Route path="/product/:productKey">
+<ProductDetails></ProductDetails>
+</Route>
 <Route path="*">
 <NotFound></NotFound>
 </Route>
